@@ -3,6 +3,10 @@ import Header from '../Header/Header';
 import CurrentKing from '../CurrentKing/CurrentKing';
 import PastKings from '../PastKings/PastKings';
 
+// Remove: when pulling data from API
+import climberData from '../../testData/climber-data';
+import competitionData from '../../testData/competition-data';
+
 import './App.css';
 
 function App() {

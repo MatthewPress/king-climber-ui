@@ -1,5 +1,5 @@
 const competitionData = {
-  competitions: [
+  "competitions": [
     {
       "id": 1,
       "climber_id": 1,

@@ -1,5 +1,5 @@
 const climberData = {
-  climbers: [
+  "climbers": [
     {
       "id": 1,
       "name": "Matthew Press",
