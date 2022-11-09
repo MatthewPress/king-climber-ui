@@ -1,3 +1,4 @@
+import { Switch, Route, Link } from 'react-router-dom';
 
 import Header from '../Header/Header';
 import CurrentKing from '../CurrentKing/CurrentKing';
