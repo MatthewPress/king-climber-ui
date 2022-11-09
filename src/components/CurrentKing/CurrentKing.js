@@ -1,8 +1,10 @@
 import './CurrentKing.css';
 
-const CurrentKing = () => {
+function CurrentKing({ climbers, lastCompetition }) {
+  const kingClimber = climbers.find(climber => climber.id === lastCompetition.climber_id)
+
   return (
-    <p>Current King</p>
+    <p>{kingClimber.name}</p>
   );
 }
 

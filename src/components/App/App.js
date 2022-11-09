@@ -21,14 +21,15 @@ function App() {
 
     getData(`/competitions`)
       .then(data => {
-        setCompetitions(data);
+        const sortedCompetitions = data.sort((a, b) => a.date < b.date ? 1 : -1);
+        setCompetitions(sortedCompetitions);
       });
   }, []);
 
   return (
     <div className="app--container">
       <Header />
-      <CurrentKing />
+      <CurrentKing climbers={climbers} lastCompetition={competitions[0]} />
       <PastKings />
     </div>
   );
