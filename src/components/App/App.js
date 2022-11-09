@@ -1,4 +1,6 @@
+
 import Header from '../Header/Header';
+import CurrentKing from '../CurrentKing/CurrentKing';
 
 import './App.css';
 
@@ -6,6 +8,7 @@ function App() {
   return (
     <div className="app--container">
       <Header />
+      <CurrentKing />
     </div>
   );
 }
