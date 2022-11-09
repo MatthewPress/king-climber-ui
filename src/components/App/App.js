@@ -5,9 +5,7 @@ import Header from '../Header/Header';
 import CurrentKing from '../CurrentKing/CurrentKing';
 import PastKings from '../PastKings/PastKings';
 
-// Remove: when pulling data from API
-import climberData from '../../testData/climber-data';
-import competitionData from '../../testData/competition-data';
+import { getData } from '../../apiCalls/apiCalls';
 
 import './App.css';
 
@@ -16,8 +14,15 @@ function App() {
   const [competitions, setCompetitions] = useState([]);
 
   useEffect(() => {
-    setClimbers(climberData);
-    setCompetitions(competitionData);
+    getData(`/climbers`)
+      .then(data => {
+        setClimbers(data);
+      });
+
+    getData(`/competitions`)
+      .then(data => {
+        setCompetitions(data);
+      });
   }, []);
 
   return (
