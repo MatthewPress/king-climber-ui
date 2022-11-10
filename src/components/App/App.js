@@ -38,7 +38,7 @@ function App() {
           ? <p>Loading</p>
           : <main>
               <CurrentKing climbers={climbers} lastCompetition={competitions[0]} />
-              <PastKings />
+              <PastKings climbers={climbers} competitions={competitions} />
             </main> 
       }
     </div>
