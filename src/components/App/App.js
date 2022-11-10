@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 
 import Header from '../Header/Header';
+import NavBar from '../NavBar/NavBar';
 import CurrentKing from '../CurrentKing/CurrentKing';
 import PastKings from '../PastKings/PastKings';
 
@@ -32,15 +33,29 @@ function App() {
 
   return (
     <div className="app--container">
-      <Header />
-      {
-        isClimbersLoading || isCompetitionLoading
-          ? <p>Loading</p>
-          : <main>
-              <CurrentKing climbers={climbers} lastCompetition={competitions[0]} />
-              <PastKings climbers={climbers} competitions={competitions} />
+      <Switch>
+        <Route 
+          exact path="/"
+          render={() => 
+            isClimbersLoading || isCompetitionLoading
+              ? <p>Loading</p>
+              : <main>
+                  <Header />
+                  <NavBar />
+                  <CurrentKing climbers={climbers} lastCompetition={competitions[0]} />
+                  <PastKings climbers={climbers} competitions={competitions} />
+                </main> 
+          }
+        />
+        <Route
+          exact path="/form"
+          render={() => 
+            <main>
+              <Header />
             </main> 
-      }
+          }
+        />
+      </Switch>
     </div>
   );
 }
