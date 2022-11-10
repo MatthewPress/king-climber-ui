@@ -5,11 +5,15 @@ function CurrentKing({ climbers, lastCompetition }) {
 
   return (
     <div className="current-king--container">
-      <img src={kingClimber.pic} alt="Current King Climber Photo" />
-      <h2>{kingClimber.name}</h2>
-      <p>{lastCompetition.date}</p>
-      <p>{lastCompetition.location}</p>
-      <p>{lastCompetition.climb_grade}</p>
+      <div>
+        <img src={kingClimber.pic} alt="Current King Climber Photo" />
+      </div>
+      <div>
+        <h2>{kingClimber.name}</h2>
+        <p>{lastCompetition.date}</p>
+        <p>{lastCompetition.location}</p>
+        <p>{lastCompetition.climb_grade}</p>
+      </div>
     </div>
   );
 }
