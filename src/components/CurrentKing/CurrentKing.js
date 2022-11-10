@@ -6,7 +6,7 @@ function CurrentKing({ climbers, lastCompetition }) {
   return (
     <div className="current-king--container">
       <div>
-        <img src={kingClimber.pic} alt="Current King Climber Photo" />
+        <img src={kingClimber.img} alt="Current King Climber Photo" />
       </div>
       <div>
         <h2>{kingClimber.name}</h2>

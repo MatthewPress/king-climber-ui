@@ -12,9 +12,9 @@ const returnTestData = (path) => {
 
 const getData = async (path) => {
   try {
-    let response = await returnTestData(path);
-    // let data = await response.json();
-    let data = response;
+    let response = await fetch(`https://king-climber-api.replitted.repl.co${path}`);
+    let data = await response.json();
+    // let data = response;
     return data;
   } catch (error) {
     console.log('Dang it');

@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import NavBar from '../NavBar/NavBar';
 import CurrentKing from '../CurrentKing/CurrentKing';
 import PastKings from '../PastKings/PastKings';
+import Form from '../Form/Form';
 
 import { getData } from '../../apiCalls/apiCalls';
 
@@ -52,6 +53,7 @@ function App() {
           render={() => 
             <main>
               <Header />
+              <Form />
             </main> 
           }
         />
