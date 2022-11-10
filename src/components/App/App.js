@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import Header from '../Header/Header';
 import NavBar from '../NavBar/NavBar';
@@ -14,7 +14,7 @@ function App() {
   const [climbers, setClimbers] = useState([]);
   const [competitions, setCompetitions] = useState([]);
   const [isClimbersLoading, setClimbersIsLoading] = useState(true);
-  const [isCompetitionLoading, setCompetitionIsLoading] = useState(true);
+  const [isCompetitionsLoading, setCompetitionsIsLoading] = useState(true);
 
   useEffect(() => {
     getData(`/climbers`)
@@ -27,7 +27,7 @@ function App() {
       .then(data => {
         const sortedCompetitions = data.sort((a, b) => a.date < b.date ? 1 : -1);
         setCompetitions(sortedCompetitions);
-        setCompetitionIsLoading(false);
+        setCompetitionsIsLoading(false);
       });
   }, []);
 
@@ -37,7 +37,7 @@ function App() {
         <Route 
           exact path="/"
           render={() => 
-            isClimbersLoading || isCompetitionLoading
+            isClimbersLoading || isCompetitionsLoading
               ? <p>Loading</p>
               : <main>
                   <Header />

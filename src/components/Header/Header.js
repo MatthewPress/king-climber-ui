@@ -1,10 +1,14 @@
+import { Link } from 'react-router-dom';
+
 import './Header.css';
 
 const Header = () => {
   return (
-    <header>
-      <h1>King Climber</h1>
-    </header>
+    <Link to="/">
+      <header>
+        <h1>King Climber</h1>
+      </header>
+    </Link>
   );
 }
 
