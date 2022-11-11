@@ -1,8 +1,17 @@
+form {
+  border: 3px solid #14343F;
+}
+
+.label--container {
+  margin-right: 80px;
+  background: #14343F;
+}
+
 label {
   display: flex;
   flex-direction: row;
-  background: #14343F;
-  width: 400px;
+  background: #989481;
+  min-width: 70vw;
   line-height: 26px;
 }
 

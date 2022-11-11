@@ -52,7 +52,7 @@ function App() {
           exact path="/form"
           render={() => 
             <main className="main-form--container">
-              <Form />
+              <Form climbers={climbers} />
             </main>
           }
         />
