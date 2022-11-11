@@ -34,14 +34,14 @@ function App() {
 
   return (
     <div className="app--container">
+      <Header />
       <Switch>
         <Route 
           exact path="/"
           render={() => 
             isClimbersLoading || isCompetitionsLoading
               ? <p>Loading</p>
-              : <main>
-                  <Header />
+              : <main className="main-landing--container">
                   <NavBar />
                   <CurrentKing climbers={climbers} lastCompetition={competitions[0]} />
                   <PastKings climbers={climbers} competitions={competitions} />
@@ -51,10 +51,9 @@ function App() {
         <Route
           exact path="/form"
           render={() => 
-            <main>
-              <Header />
+            <main className="main-form--container">
               <Form />
-            </main> 
+            </main>
           }
         />
       </Switch>

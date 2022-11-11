@@ -7,3 +7,7 @@ img {
   width: 300px;
   border-radius: 50%;
 }
+
+.current-king--content {
+  margin: 2rem;
+}

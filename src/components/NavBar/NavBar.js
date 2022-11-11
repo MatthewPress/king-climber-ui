@@ -5,7 +5,7 @@ import './NavBar.css';
 const NavBar = () => {
   return (
     <Link to="/form">
-      <button>ADD COMP</button>
+      <button className="new-comp--button">NEW COMP</button>
     </Link>
   )
 }

@@ -11,6 +11,8 @@ const PastKings = ({ climbers, competitions }) => {
       <th>Date</th>
       <th>Name</th>
       <th>Location</th>
+      <th>Climb Type</th>
+      <th>Climb Grade</th>
     </tr>
   );
   
@@ -20,6 +22,8 @@ const PastKings = ({ climbers, competitions }) => {
         <td>{comp.date}</td>
         <td>{comp.name}</td>
         <td>{comp.location}</td>
+        <td>{comp.climb_type}</td>
+        <td>{comp.climb_grade}</td>
       </tr>
     )
   });
