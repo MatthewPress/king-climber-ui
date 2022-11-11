@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Header from '../Header/Header';
+import LoadingPage from '../LoadingPage/LoadingPage';
 import NavBar from '../NavBar/NavBar';
 import CurrentKing from '../CurrentKing/CurrentKing';
 import PastKings from '../PastKings/PastKings';
@@ -40,7 +41,7 @@ function App() {
           exact path="/"
           render={() => 
             isClimbersLoading || isCompetitionsLoading
-              ? <p>Loading</p>
+              ? <LoadingPage />
               : <main className="main-landing--container">
                   <NavBar />
                   <CurrentKing climbers={climbers} lastCompetition={competitions[0]} />
