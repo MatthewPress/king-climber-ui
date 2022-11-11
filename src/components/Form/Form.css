@@ -1,16 +1,14 @@
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 label {
+  display: flex;
+  flex-direction: row;
   background: #14343F;
+  width: 400px;
+  line-height: 26px;
 }
 
 input,
-select,
-label {
-  font-size: 1.5em;
+select {
+  height: 20px;
+  flex: 0 0 200px;
+  margin-left: 10px;
 }
