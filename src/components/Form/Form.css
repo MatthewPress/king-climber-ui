@@ -1,0 +1,16 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  background: #14343F;
+}
+
+input,
+select,
+label {
+  font-size: 1.5em;
+}
