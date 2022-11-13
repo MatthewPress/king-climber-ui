@@ -1,0 +1,20 @@
+table {
+  max-height: 40vh;
+  width: 80vw;
+  border: 8px solid #14343F;
+  border-collapse: collapse;
+  overflow-y: scroll;
+}
+
+thead {
+  background: #14343F;
+}
+
+tbody {
+  background: #989481;
+  text-align: center;
+}
+
+tr {
+  height: 2rem;
+}
