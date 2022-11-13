@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { postData } from '../../apiCalls/apiCalls';
@@ -28,7 +27,7 @@ function Form({ climbers }) {
 
     postData('/competitions', values)
       .catch((error) => {
-        console.log("IDK");
+        console.log("POST competition data error");
       });
   }
 

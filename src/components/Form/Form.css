@@ -18,8 +18,3 @@ input,
 select {
   width: 150px;
 }
-
-.add-comp--button {
-  align-self: center;
-  margin: 2rem;
-}

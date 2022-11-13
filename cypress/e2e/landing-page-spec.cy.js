@@ -37,13 +37,13 @@ describe('Landing Page', () => {
       .should('contain', 'Location')
   });
 
-  it('Should navigate to the new competition page', () => {
-    cy.get('main')
-      .get('.new-comp--button')
+  it('Should navigate to the form page', () => {
+    cy.get('header')
+      .get('button').eq(1)
       .should('be.visible')
       .click()
 
-      cy.url('should.be', 'http://localhost:3000/form')
+    cy.url('should.be', 'http://localhost:3000/form')
   });
 
 })

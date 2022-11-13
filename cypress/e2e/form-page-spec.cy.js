@@ -14,8 +14,8 @@ describe('Form Page', () => {
 
     cy.visit('http://localhost:3000/');
 
-    cy.get('main')
-      .get('.new-comp--button')
+    cy.get('header')
+      .get('button').eq(1)
       .click()
   });
   
@@ -25,7 +25,16 @@ describe('Form Page', () => {
       .should('contain', 'King Climber');
   });
 
-  it('Should', () => {
+    // it('Should', () => {
     
-  })
+  // })
+  
+  it('Should navigate to the landing page', () => {
+    cy.get('header')
+      .get('button').eq(0)
+      .should('be.visible')
+      .click()
+
+    cy.url('should.be', 'http://localhost:3000/')
+  });
 })

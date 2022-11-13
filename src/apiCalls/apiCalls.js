@@ -1,6 +1,7 @@
 const getData = async (path) => {
   try {
-    const response = await fetch(`https://king-climber-api.replitted.repl.co${path}`);
+    const response = await fetch(`https://king-climber-api.replitted.repl.co/${path}`);
+    
     if(!response.ok) {
       throw new Error();
     } else {
