@@ -13,7 +13,7 @@ function Form({ climbers }) {
     climb_type: "",
     climb_grade: "",
     climb_description: ""
-  })
+  });
 
   const handleChange = (event) => {
     setValues((values) => ({
@@ -32,9 +32,10 @@ function Form({ climbers }) {
   }
 
   return (
-    <form>
-        <label htmlFor="climber_id">
-          <span className="label--container">Climber</span>
+    <main className="page--container">
+      <form>
+        <div className="form-field">
+          <label htmlFor="climber_id">Climber</label>
           <select
             name="climber_id"
             onChange={handleChange}
@@ -45,17 +46,17 @@ function Form({ climbers }) {
               })
             }
           </select>
-        </label>
-        <label htmlFor="date">
-        <span className="label--container">Date</span>
+        </div>
+        <div className="form-field">
+          <label htmlFor="date">Date</label>
           <input 
             type="date"
             name="date"
             onChange={handleChange}
           />
-        </label>
-        <label htmlFor="location">
-        <span className="label--container">Location</span>
+        </div>
+        <div className="form-field">
+          <label htmlFor="location">Location</label>
           <select 
             name="location"
             onChange={handleChange}
@@ -64,9 +65,9 @@ function Form({ climbers }) {
             <option value="Movement RiNo">Movement RiNo</option>
             <option value="Movement Englewood">Movement Englewood</option>
           </select>
-        </label>
-        <label htmlFor="climb_type">
-          <span className="label--container">Climb Type</span>
+        </div>
+        <div className="form-field">
+          <label htmlFor="climb_type">Climb Type</label>
           <select
             name="climb_type"
             onChange={handleChange}
@@ -75,9 +76,9 @@ function Form({ climbers }) {
             <option value="Top Rope">Top Rope</option>
             <option value="Sport">Sport</option>
           </select>
-        </label>
-        <label htmlFor="climb_grade">
-          <span className="label--container">Climb Grade</span>
+        </div>
+        <div className="form-field">
+          <label htmlFor="climb_grade">Climb Grade</label>
           <select
             name="climb_grade"
             onChange={handleChange}
@@ -91,9 +92,9 @@ function Form({ climbers }) {
             <option value="V7 / Pink">V7 / Pink</option>
             <option value="5.11a">5.11a</option>
           </select>
-        </label>
-        <label htmlFor="climb_description">
-          <span className="label--container">Climb Description</span>
+        </div>
+        <div className="form-field">
+          <label htmlFor="climb_description">Climb Description</label>
           <select
             name="climb_description"
             onChange={handleChange}
@@ -101,9 +102,16 @@ function Form({ climbers }) {
             <option value="sloppy">Sloppy</option>
             <option value="crimpy">Crimpy</option>
           </select>
-        </label>
-        <button onClick={(event) => addComp(event)}>ADD COMP</button>
-    </form>
+        </div> 
+      </form>
+      <button 
+        className="add-comp--button" 
+        onClick={(event) => addComp(event)}
+      >
+        ADD COMP
+      </button>
+
+    </main>
   )
 }
 

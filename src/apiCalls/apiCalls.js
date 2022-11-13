@@ -1,16 +1,20 @@
 const getData = async (path) => {
   try {
-    let response = await fetch(`https://king-climber-api.replitted.repl.co${path}`);
-    let data = await response.json();
-    return data;
+    const response = await fetch(`https://king-climber-api.replitted.repl.co${path}`);
+    if(!response.ok) {
+      throw new Error();
+    } else {
+      const data = await response.json();
+      return data;
+    }
   } catch (error) {
-    console.log('get error');
+    return error;
   }
 };
 
 const postData = async (path, comp) => {
   try {
-    let response = await fetch(`https://king-climber-api.replitted.repl.co${path}`, {
+    const response = await fetch(`https://king-climber-api.replitted.repl.co${path}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,7 +29,7 @@ const postData = async (path, comp) => {
       return data;
     }
   } catch (error) {
-    console.log('post error');
+    return error;
   }
 };
 

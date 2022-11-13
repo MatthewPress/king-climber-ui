@@ -1,23 +1,25 @@
 form {
-  border: 3px solid #14343F;
+  display: flex;
+  flex-direction: column;
 }
 
-.label--container {
-  margin-right: 80px;
-  background: #14343F;
+.form-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 label {
-  display: flex;
-  flex-direction: row;
-  background: #989481;
-  min-width: 70vw;
-  line-height: 26px;
+  background: #14343F;
+  margin-right: 100px;
 }
 
 input,
 select {
-  height: 20px;
-  flex: 0 0 200px;
-  margin-left: 10px;
+  width: 150px;
+}
+
+.add-comp--button {
+  align-self: center;
+  margin: 2rem;
 }

@@ -2,8 +2,8 @@ import './LoadingPage.css';
 
 const LoadingPage = () => {
   return (
-    <section className="loading-page--container">
-      <p>Loading...</p>
+    <section className="page--container">
+      <p className="resource-message">Loading...</p>
     </section>
   );
 }
