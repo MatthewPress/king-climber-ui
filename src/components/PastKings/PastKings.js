@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import './PastKings.css';
 
 const PastKings = ({ climbers, competitions }) => {
@@ -16,7 +18,7 @@ const PastKings = ({ climbers, competitions }) => {
     </tr>
   );
   
-  const rows = completeComps.map((comp, index) => {
+  const TableRows = completeComps.map((comp, index) => {
     return (
       <tr key={index} id={comp.id}>
         <td>{comp.date}</td>
@@ -34,10 +36,15 @@ const PastKings = ({ climbers, competitions }) => {
         {TableHeader}
       </thead>
       <tbody>
-        {rows}
+        {TableRows}
       </tbody>
     </table>
   );
 }
 
 export default PastKings;
+
+PastKings.propTypes = {
+  climbers: PropTypes.arrayOf(PropTypes.object),
+  competitions: PropTypes.arrayOf(PropTypes.object)
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import { postData } from '../../apiCalls/apiCalls';
 
@@ -104,15 +105,13 @@ function Form({ climbers }) {
           </select>
         </div> 
       </form>
-      <button 
-        className="add-comp--button" 
-        onClick={(event) => addComp(event)}
-      >
-        ADD COMP
-      </button>
-
+      <button className="add-comp--button" onClick={(event) => addComp(event)} >ADD COMP</button>
     </main>
   )
 }
 
 export default Form;
+
+Form.propTypes = {
+  climbers: PropTypes.arrayOf(PropTypes.object)
+}

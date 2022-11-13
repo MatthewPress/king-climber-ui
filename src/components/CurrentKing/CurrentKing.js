@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import './CurrentKing.css';
 
 function CurrentKing({ climbers, lastCompetition }) {
@@ -19,3 +21,16 @@ function CurrentKing({ climbers, lastCompetition }) {
 }
 
 export default CurrentKing;
+
+CurrentKing.propTypes = {
+  climbers: PropTypes.arrayOf(PropTypes.object).isRequired,
+  lastCompetition: PropTypes.shape({
+    id: PropTypes.string,
+    climber_id: PropTypes.string,
+    date: PropTypes.string,
+    location: PropTypes.string,
+    climb_type: PropTypes.string,
+    climb_grade: PropTypes.string,
+    climb_description: PropTypes.string
+  }).isRequired
+}
