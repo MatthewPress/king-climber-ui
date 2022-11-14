@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 
+import ProfilePic from '../../assets/casual-photo-poorQuality.jpg'
+
 import './CurrentKing.css';
 
 function CurrentKing({ climbers, lastCompetition }) {
@@ -8,7 +10,7 @@ function CurrentKing({ climbers, lastCompetition }) {
   return (
     <div className="current-king--container">
       <div className="current-king--content">
-        <img src={kingClimber.img} alt="Current King Climber Photo" />
+        <img src={ProfilePic} alt="Current King Climber Photo" />
       </div>
       <div className="current-king--content">
         <h2>{kingClimber.name}</h2>

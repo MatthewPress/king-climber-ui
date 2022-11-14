@@ -26,7 +26,9 @@ describe('Landing Page', () => {
       .get('.current-king--container')
       .get('h2')
       .should('be.visible')
-      .should('contain', 'Sed Tummer')
+      .should('contain', 'Bogan Lishop')
+      .get('p').first()
+      .should('contain', '12/13/2022')
   });
 
   it('Should render information about past king climbers', () => {

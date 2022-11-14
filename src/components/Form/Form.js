@@ -14,6 +14,7 @@ function Form({ climbers }) {
     climb_grade: "",
     climb_description: ""
   });
+  const [postStatus, setPostStatus] = useState("");
 
   const handleChange = (event) => {
     setValues((values) => ({
@@ -22,13 +23,20 @@ function Form({ climbers }) {
     }));
   }
 
-  const addComp = (event) => {
-    console.log(values);
-
-    postData('/competitions', values)
-      .catch((error) => {
-        console.log("POST competition data error");
+  const handleSubmit = (event) => {
+    const validation = Object.keys(values)
+      .every(key => {
+        return values[key] !== "";
       });
+
+    if (validation) {
+      postData('competitions', values)
+      .catch(() => {
+        setPostStatus("Unable to add competition")
+      });
+    } else {
+      setPostStatus("All fields must be filled out");
+    }
   }
 
   return (
@@ -37,12 +45,15 @@ function Form({ climbers }) {
         <div className="form-field">
           <label htmlFor="climber_id">Climber</label>
           <select
+            id="climber_id"
             name="climber_id"
             onChange={handleChange}
+            defaultValue="-- Select An Option --"
           >
+            <option key={0} disabled> -- Select An Option -- </option>
             {
               climbers.map((climber, index) => {
-                return <option key={index} value={climber.id}>{climber.name}</option>
+                return <option key={index+1} value={climber.id}>{climber.name}</option>
               })
             }
           </select>
@@ -51,16 +62,20 @@ function Form({ climbers }) {
           <label htmlFor="date">Date</label>
           <input 
             type="date"
+            id="date"
             name="date"
             onChange={handleChange}
           />
         </div>
         <div className="form-field">
           <label htmlFor="location">Location</label>
-          <select 
+          <select
+            id="location"
             name="location"
             onChange={handleChange}
+            defaultValue="-- Select An Option --"
           >
+            <option key={0} disabled> -- Select An Option -- </option>
             <option value="Movement Baker">Movement Baker</option>
             <option value="Movement RiNo">Movement RiNo</option>
             <option value="Movement Englewood">Movement Englewood</option>
@@ -69,9 +84,12 @@ function Form({ climbers }) {
         <div className="form-field">
           <label htmlFor="climb_type">Climb Type</label>
           <select
+            id="climb_type"
             name="climb_type"
             onChange={handleChange}
+            defaultValue="-- Select An Option --"
           >
+            <option key={0} disabled> -- Select An Option -- </option>
             <option value="Boulder">Boulder</option>
             <option value="Top Rope">Top Rope</option>
             <option value="Sport">Sport</option>
@@ -80,9 +98,12 @@ function Form({ climbers }) {
         <div className="form-field">
           <label htmlFor="climb_grade">Climb Grade</label>
           <select
+            id="climb_grade"
             name="climb_grade"
             onChange={handleChange}
+            defaultValue="-- Select An Option --"
           >
+            <option key={0} disabled> -- Select An Option -- </option>
             <option value="V1 / Green">V1 / Green</option>
             <option value="V2 / Green">V2 / Green</option>
             <option value="V3 / Yellow">V3 / Yellow</option>
@@ -96,15 +117,19 @@ function Form({ climbers }) {
         <div className="form-field">
           <label htmlFor="climb_description">Climb Description</label>
           <select
+            id="climb_description"
             name="climb_description"
             onChange={handleChange}
+            defaultValue="-- Select An Option --"
           >
+            <option key={0} disabled> -- Select An Option -- </option>
             <option value="sloppy">Sloppy</option>
             <option value="crimpy">Crimpy</option>
           </select>
         </div> 
       </form>
-      <button className="add-comp--button" onClick={(event) => addComp(event)} >ADD COMP</button>
+      <p className="post-status--content">{postStatus}</p>
+      <button className="add-comp--button" onClick={(event) => handleSubmit(event)} >ADD COMP</button>
     </main>
   )
 }

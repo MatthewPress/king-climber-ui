@@ -10,6 +10,13 @@ p {
   margin: 0;
 }
 
+p,
+label,
+input,
+select {
+  font-size: 1.3em;
+}
+
 .page--container {
   display: flex;
   flex-direction: column;
