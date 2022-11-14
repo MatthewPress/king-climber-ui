@@ -34,5 +34,23 @@
     "climb_type": "boulder",
     "climb_grade": "V5 / orange",
     "climb_description": "crimpy"
+  },
+  {
+    "id": 5,
+    "climber_id": 1,
+    "date": "12/11/2022",
+    "location": "Movement Baker",
+    "climb_type": "boulder",
+    "climb_grade": "V5 / orange",
+    "climb_description": "crimpy"
+  },
+  {
+    "id": 6,
+    "climber_id": 3,
+    "date": "12/13/2022",
+    "location": "Movement Baker",
+    "climb_type": "boulder",
+    "climb_grade": "V5 / orange",
+    "climb_description": "crimpy"
   }
 ]
