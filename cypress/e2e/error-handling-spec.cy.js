@@ -22,18 +22,14 @@ describe('Error Handling', () => {
     });
 
     cy.get('.page--container')
-      .get('.resource-message')
-      .should('be.visible')
-      .should('contain', 'We could not load data. You could try reloading.');
+      .get('.resource-message').should('be.visible').should('contain', 'We could not load data. You could try reloading.');
   });
 
   it('Should show an error page if the user enters an invalid url', () => {
     cy.visit('http://localhost:3000/asdf');
     
     cy.get('.page--container')
-      .get('.resource-message')
-      .should('be.visible')
-      .should('contain', 'We could not load data. You could try reloading.');
+      .get('.resource-message').should('be.visible').should('contain', 'We could not load data. You could try reloading.');
   })
 
   it('Should not take the user to the form page from the error page', () => {
@@ -50,8 +46,7 @@ describe('Error Handling', () => {
     cy.visit('http://localhost:3000/asdf');
 
     cy.get('header')
-      .get('button').eq(1)
-      .click()
+      .get('button').eq(1).click()
 
     cy.url('should.be', 'http://localhost:3000/asdf');
   })
@@ -70,8 +65,7 @@ describe('Error Handling', () => {
     cy.visit('http://localhost:3000/asdf');
 
     cy.get('header')
-      .get('button').eq(0)
-      .click()
+      .get('button').eq(0).click()
 
     cy.url('should.be', 'http://localhost:3000/');
   })
