@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/MatthewPress/king-climber-ui">
+    <!-- <img src="./src/images/pilgram-logo.png" alt="Logo" width="80" height="80"> -->
+  </a>
 
-## Available Scripts
+<!-- HEADER -->
+  <h3 align="center">King Climber</h3>
+  <p align="center">
+    A web application for tracking who is currently is the best climber in your group
+    <br />
+    <a href="https://github.com/MatthewPress/king-climber-ui"><strong>Explore the docs »</strong></a>
+    <br />
+    <a href="https://king-climber-ui.vercel.app/"><strong>Visit the Deployed Site »</strong></a>
+  </p>
+</div>
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li><a href="#setup">Setup</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#notes">Notes</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-### `npm start`
+## About The Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- [![Pilgram Demo][product-demo]](./src/images/pilgram-demo.gif) -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This is a web application built for my friends and I so that we can keep track of the current "King Climber." You can see the current king, past kings, and add information following competitions to decide the new king climber. It was created for the Turing School of Software and Design's Module 3 final solo project. The overall goal was to demonstrate what we have learned after 5 months in the program.
 
-### `npm test`
+The project specs can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Built With
 
-### `npm run build`
+* JS
+* React
+* React Router
+* PropTypes
+* Cypress
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Visit [this repo](https://github.com/MatthewPress/king-climber-ui) and `clone` it down to your local machine
+- `npm install`
+- `npm run start`
 
-### `npm run eject`
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Visit the [deployed site](https://king-climber-ui.vercel.app/)
+- There's no login information needed and anyone can add a competition, so... please don't do that.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<!-- [![Book Trip Demo][book-trip-demo]](./src/images/book-trip-demo.gif) -->
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Learn More
+## Notes
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I worked on this project for roughly three days. I'll continue to improve upon it and make my own backend because this is something my friends and I will actually use.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Wins:
 
-### Code Splitting
+* thb not my best work, but I'm actually excited about this project and am excited to keep on improving it.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Challenges:
 
-### Analyzing the Bundle Size
+* I've realized that I probably don't understand error handling relating to fetch calls as well as I thought I did. Also, I need to keep working on testing with Cypress and, also, improve my CSS skills
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Making a Progressive Web App
+## Roadmap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [ ] Create my own backend
+- [ ] User authentication
+- [ ] Improve UI
+- [ ] DRY up code
 
-### Advanced Configuration
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contact
 
-### Deployment
+Matthew Press | [LinkedIn](https://linkedin.com/in/matthew-press-813961246/) | [GMail](mailto:press.matt14@gmail.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### `npm run build` fails to minify
+<!-- MARKDOWN LINKS & IMAGES -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
